@@ -1,0 +1,20 @@
+{
+  "name": "npm-register",
+  "description": "Your own private npm registry and backup server",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "repository": "https://github.com/jdxcode/npm-register",
+  "keywords": ["node", "npm"],
+  "env": {
+    "NPM_REGISTER_STORAGE": "s3",
+    "AWS_ACCESS_KEY_ID": "",
+    "AWS_SECRET_ACCESS_KEY": "",
+    "AWS_S3_BUCKET": "",
+    "GCS_BUCKET": "",
+    "CACHE_PACKAGE_TTL": "60",
+    "NODE_ENV": "production",
+    "UPLINK": "https://registry.npmjs.org"
+  },
+  "addons": [
+    "heroku-redis"
+  ]
+}

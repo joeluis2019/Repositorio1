@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+'use strict'
+
+const argv = require('yargs')
+  .command('start', 'start the server')
+  .boolean('always-https')
+  .describe('always-https', 'Ignore request headers and always return HTTPS URLs')
+  .demand(1)
+  .strict()
+  .help('h')
+  .alias('h', 'help')
+  .version()
+  .argv
+
+switch (argv._[0]) {
+  case 'start':
+    require('../lib/start')
+    break
+}
